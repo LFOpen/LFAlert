@@ -1,2 +1,2 @@
 # LFAlert
-方便的显示提示框
+警告框，集合UIAlertController &amp;&amp; UIALertView
