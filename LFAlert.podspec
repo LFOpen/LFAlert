@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author             = { "archerLj" => "lj0011977@163.com" }
   s.source       = { :git => "https://github.com/LFOpen/LFAlert.git", :tag => "#{s.version}" }
+  s.platform     = :ios
   s.source_files  = "LFAlert/LFAlert/*.{h,m}"
   s.requires_arc = true
 
