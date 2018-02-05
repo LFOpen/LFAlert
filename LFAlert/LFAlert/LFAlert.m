@@ -38,19 +38,24 @@ static id _instance = nil;
     if (version.doubleValue >= 9.0) {
 
         UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *cancel = [UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            if (cancelAction != nil) {
-                cancelAction();
-            }
-        }];
         
-        UIAlertAction *ok = [UIAlertAction actionWithTitle:okTitle style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-            if (okAction != nil) {
-                okAction();
-            }
-        }];
-        [alertVC addAction:cancel];
-        [alertVC addAction:ok];
+        if (cancelTitle != nil) {
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                if (cancelAction != nil) {
+                    cancelAction();
+                }
+            }];
+            [alertVC addAction:cancel];
+        }
+        
+        if (okTitle != nil) {
+            UIAlertAction *ok = [UIAlertAction actionWithTitle:okTitle style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                if (okAction != nil) {
+                    okAction();
+                }
+            }];
+            [alertVC addAction:ok];
+        }
         [controller presentViewController:alertVC animated:YES completion:nil];
     
     // 9.0之前用UIAlertView
@@ -63,6 +68,7 @@ static id _instance = nil;
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
     if (buttonIndex == 0) {
         if (self.cancelAction != nil) {
             self.cancelAction();
