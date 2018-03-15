@@ -30,8 +30,7 @@ static id _instance = nil;
               cancelTitle:(NSString *)cancelTitle
              cancelAction:(void (^)(void))cancelAction
                   okTitle:(NSString *)okTitle
-                 okAction:(void (^)(void))okAction
-             inController:(__weak UIViewController *)controller {
+                 okAction:(void (^)(void))okAction {
 
     // 9.0之后用UIAlertController
     NSString *version = [UIDevice currentDevice].systemVersion;
@@ -56,7 +55,7 @@ static id _instance = nil;
             }];
             [alertVC addAction:ok];
         }
-        [controller presentViewController:alertVC animated:YES completion:nil];
+        [[self currentController] presentViewController:alertVC animated:YES completion:nil];
     
     // 9.0之前用UIAlertView
     } else {
@@ -78,5 +77,20 @@ static id _instance = nil;
             self.okAction();
         }
     }
+}
+
+-(UIViewController *)currentController {
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    UIViewController *rootVC = keyWindow.rootViewController;
+    while (rootVC.presentedViewController) {
+        rootVC = rootVC.presentedViewController;
+        
+        if ([rootVC isKindOfClass:[UINavigationController class]]) {
+            rootVC = [(UINavigationController *)rootVC visibleViewController];
+        } else if ([rootVC isKindOfClass:[UITabBarController class]]) {
+            rootVC = [(UITabBarController *)rootVC selectedViewController];
+        }
+    }
+    return rootVC;
 }
 @end

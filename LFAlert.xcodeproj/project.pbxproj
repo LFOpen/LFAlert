@@ -14,7 +14,6 @@
 		41DA0F062026F6BC007847B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DA0F042026F6BC007847B9 /* LaunchScreen.storyboard */; };
 		41DA0F092026F6BC007847B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DA0F082026F6BC007847B9 /* main.m */; };
 		41DA0F132026F6F6007847B9 /* LFAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DA0F112026F6F6007847B9 /* LFAlert.m */; };
-		41DA0F162026F702007847B9 /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DA0F152026F702007847B9 /* ExampleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +29,6 @@
 		41DA0F082026F6BC007847B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		41DA0F112026F6F6007847B9 /* LFAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFAlert.m; sourceTree = "<group>"; };
 		41DA0F122026F6F6007847B9 /* LFAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFAlert.h; sourceTree = "<group>"; };
-		41DA0F142026F702007847B9 /* ExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleViewController.h; sourceTree = "<group>"; };
-		41DA0F152026F702007847B9 /* ExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +61,6 @@
 		41DA0EF82026F6BC007847B9 /* LFAlert */ = {
 			isa = PBXGroup;
 			children = (
-				41DA0F0F2026F6F6007847B9 /* example */,
 				41DA0F102026F6F6007847B9 /* LFAlert */,
 				41DA0EF92026F6BC007847B9 /* AppDelegate.h */,
 				41DA0EFA2026F6BC007847B9 /* AppDelegate.m */,
@@ -77,15 +73,6 @@
 				41DA0F082026F6BC007847B9 /* main.m */,
 			);
 			path = LFAlert;
-			sourceTree = "<group>";
-		};
-		41DA0F0F2026F6F6007847B9 /* example */ = {
-			isa = PBXGroup;
-			children = (
-				41DA0F142026F702007847B9 /* ExampleViewController.h */,
-				41DA0F152026F702007847B9 /* ExampleViewController.m */,
-			);
-			path = example;
 			sourceTree = "<group>";
 		};
 		41DA0F102026F6F6007847B9 /* LFAlert */ = {
@@ -170,7 +157,6 @@
 			files = (
 				41DA0EFE2026F6BC007847B9 /* ViewController.m in Sources */,
 				41DA0F092026F6BC007847B9 /* main.m in Sources */,
-				41DA0F162026F702007847B9 /* ExampleViewController.m in Sources */,
 				41DA0F132026F6F6007847B9 /* LFAlert.m in Sources */,
 				41DA0EFB2026F6BC007847B9 /* AppDelegate.m in Sources */,
 			);

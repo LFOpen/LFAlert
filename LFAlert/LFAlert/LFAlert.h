@@ -17,7 +17,6 @@
               cancelTitle:(NSString *)cancelTitle
              cancelAction:(void (^)(void))cancelAction
                   okTitle:(NSString *)okTitle
-                 okAction:(void (^)(void))okAction
-             inController:(__weak UIViewController *)controller;
+                 okAction:(void (^)(void))okAction;
 
 @end

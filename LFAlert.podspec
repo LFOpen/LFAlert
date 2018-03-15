@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LFAlert"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "更加方便的显示提示框"
   s.description  = <<-DESC
 		集合UIAlertController和UIAlertView, 使显示简单的提示框更加方便
